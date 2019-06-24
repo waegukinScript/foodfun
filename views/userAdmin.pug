@@ -1,24 +1,14 @@
-extends layout
-
-block content
-
-  // ================ Start banner Area =================
-  section.banner-area.relative
-    .container
-      .row.height.align-items-center.justify-content-center
-        .banner-content.col-lg-6
-          h1 User Admin
-          hr
-          .breadcrmb
-            p
-              a(href='index.html') Databases
-              span.lnr.lnr-arrow-right
-              a(href='about.html') From  ../models
-              a(href='/contactDatabase')
-                li Contact Database
-              a(href="/eventDatabase")
-                li Event Database
-              a(href="/userDatabase")
-                li User Database
-              
-  
+include partials/header
+section.text-center
+    .container(style='margin-top:150px;')
+        .row
+            .col-lg-12
+                h2(style='color:black; font-weight:700;')
+                    | Database
+                h6
+                    a(style='color:#ffb606; font-weight:700;' href='/contactDatabase') Contact Database
+                h6
+                    a(style='color:#ffb606; font-weight:700;' href='/eventDatabase') Event Database
+                h6
+                    a(style='color:#ffb606; font-weight:700;' href='/userDatabase') User Database
+include partials/footer

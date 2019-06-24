@@ -1,17 +1,14 @@
 const fs = require('fs');
 const pdf = require('html-pdf');
 const jade = require('jade');
+const Event = require('../models/Event');
 
 exports.postEvent = (req, res, next) => {
   const obj = req.body;
-  console.log('Events');
-  console.log(obj);
   const event = new Event({
-    bookName: obj.bookName,
-    emailAddress: obj.emailAddress,
-    phoneNumber: obj.phoneNumber,
-    eventDate: obj.eventDate,
-    selectPeople: obj.selectPeople,
+    date: obj.date,
+    time: obj.time,
+    name: obj.name,
   });
   event.save((err) => {
     if (err) {
@@ -27,7 +24,7 @@ exports.postDeleteEvent = (req, res, next) => {
     if (err) {
       console.log(err);
     } else {
-      return res.redirect('back');
+      return res.redirect('/eventDatabase');
     }
   });
 };
@@ -53,11 +50,9 @@ exports.postUpdateEvent = (req, res, next) => {
     if (err) {
       console.log(err);
     } else if (event) {
-    event.bookName = obj.bookName,
-    event.emailAddress = obj.emailAddress,
-    event.phoneNumber = obj.phoneNumber,
-    event.eventDate = obj.eventDate,
-    event.selectPeople = obj.selectPeople,
+    event.name = obj.name,
+    event.date = obj.date,
+    event.time = obj.time
       event.save((err) => {
         if (err) {
           return next(err);
@@ -67,7 +62,6 @@ exports.postUpdateEvent = (req, res, next) => {
     }
   });
 };
-
 
 exports.postGetReportEvent = (req, res, next) => {
   const { id } = (req.params);
@@ -92,28 +86,20 @@ exports.postGetReportEvent = (req, res, next) => {
                     }
                     </style>
                     <div style="margin-top: 50px">
-                      <h1 style="margin-left: 70px;">Event</h1>
+                      <h1 style="margin-left: 70px;">Table Information</h1>
                       <hr style=" margin-top:0px; height:10px;border:none;color:#333;background-color:#333; margin-left: 70px; margin-right: 73px;" />
                       <table border="1">
                         <tr>
-                          <td class="heading">Booking Name</td>
-                          <td class="value">${event.bookName}</td>
+                          <td class="heading">Name</td>
+                          <td class="value">${event.name}</td>
                         </tr>
                         <tr>
-                          <td class="heading">Email Address</td>
-                          <td class="value">${event.emailAddress}</td>
+                          <td class="heading">Date</td>
+                          <td class="value">${event.date}</td>
                         </tr>
                         <tr>
-                          <td class="heading">Phone Number</td>
-                          <td class="value">${event.phoneNumber}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Event Date</td>
-                          <td class="value">${event.eventDate}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Selected People</td>
-                          <td class="value">${event.selectPeople}</td>
+                          <td class="heading">Time</td>
+                          <td class="value">${event.time}</td>
                         </tr>
                       </table>
                   </div>
@@ -166,6 +152,7 @@ exports.postDeletePageEvent = (req, res, next) => {
   }
 };
 
+
 const ITEMS_PER_PAGE = 10;
 exports.postSavePageEvent = (req, res, next) => {
   const { page } = (req.params) || 1;
@@ -196,9 +183,9 @@ exports.postSavePageEvent = (req, res, next) => {
     });
 };
 
+
 const nodemailer = require('nodemailer');
 const sendgridTransport = require('nodemailer-sendgrid-transport');
-const Event = require('../models/Event');
 const Contact = require('../models/Contact');
 
 const transporter = nodemailer.createTransport({
@@ -217,6 +204,7 @@ exports.postSendEmailEvent = (req, res, next) => {
     id
   });
 };
+
 
 exports.postEmailEvent = (req, res, next) => {
   const { id } = (req.params);
@@ -244,33 +232,21 @@ exports.postEmailEvent = (req, res, next) => {
                     }
                     </style>
                     <div style="margin-top: 50px">
-                      <h1 style="margin-left: 70px;">Event</h1>
+                      <h1 style="margin-left: 70px;">Table Information</h1>
                       <hr style=" margin-top:0px; height:10px;border:none;color:#333;background-color:#333; margin-left: 70px; margin-right: 73px;" />
                       <table border="1">
-                      <tr>
-                        <td class="heading">Booking Name</td>
-                        <td class="value">${event.bookName}</td>
-                      </tr>
-                      <tr>
-                        <td class="heading">Email Address</td>
-                        <td class="value">${event.emailAddress}</td>
-                      </tr>
-                      <tr>
-                        <td class="heading">Phone Number</td>
-                        <td class="value">${event.phoneNumber}</td>
-                      </tr>
-                      <tr>
-                        <td class="heading">Event Date</td>
-                        <td class="value">${event.eventDate}</td>
-                      </tr>
-                      <tr>
-                        <td class="heading">Selected People</td>
-                        <td class="value">${event.selectPeople}</td>
-                      </tr>
-                      <tr>
-                        <td class="heading">Date Entered</td>
-                        <td class="value">${event.createdAt}</td>
-                      </tr>
+                        <tr>
+                          <td class="heading">Name</td>
+                          <td class="value">${event.name}</td>
+                        </tr>
+                        <tr>
+                          <td class="heading">Date</td>
+                          <td class="value">${event.date}</td>
+                        </tr>
+                        <tr>
+                          <td class="heading">Time</td>
+                          <td class="value">${event.time}</td>
+                        </tr>
                       </table>
                   </div>
           `;
@@ -304,15 +280,6 @@ exports.postEmailEvent = (req, res, next) => {
     title: 'Send Email',
     id
   });
-  // transporter.sendMail({
-  //   to: 'ammarshabbir007@gmail.com',
-  //   from: 'MailRoomNS1',
-  //   subject: 'We Received Your Parcel',
-  //   html: 'Working',
-  //   files     : [{filename: 'Report.pdf', content: data}],
-  // });
-  // res.send(`Working${id}`);
-  // res.send(`Working${id}${name}${recipientEmail}${postMessage}`);
 };
 
 exports.postSendEmailPageContact = (req, res, next) => {
@@ -368,5 +335,4 @@ exports.postEmailPageEvent = (req, res, next) => {
     title: 'Email Page',
     page
   });
-  // res.send(`Working${page}${name}${recipientEmail}${postMessage}`);
 };

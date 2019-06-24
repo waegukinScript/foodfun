@@ -1,28 +1,19 @@
-extends layout
+include partials/header
+section.text-center
+    .container(style='margin-top:150px;')
+        .row
+            .col-lg-12
+                h2(style='color:black; font-weight:700;')
+                    | Database
+                h6
+                    a(style='color:#ffb606; font-weight:700;' href='/contactDatabase') Contact Database
+                h6
+                    a(style='color:#ffb606; font-weight:700;' href='/eventDatabase') Event Database
+                h6
+                    a(style='color:#ffb606; font-weight:700;' href='/userDatabase') User Database
 
-block content
-
-  // ================ Start banner Area =================
-  section.banner-area.relative
-    .container
-      .row.height.align-items-center.justify-content-center
-        .banner-content.col-lg-6
-          h1 Email Page
-          hr
-          .breadcrmb
-            p
-              a(href='index.html') Databases
-              span.lnr.lnr-arrow-right
-              a(href='about.html') From  ../models
-              a(href="/contactDatabase")
-                li Contact
-              a(href="/eventDatabase")
-                li Event
-              a(href="/userDatabase")
-                li User
-
-  div.row
-      div.col-lg-4.offset-lg-4
+div.row(style='margin-top:50px; margin-bottom:50px;')
+    div.col-lg-4.offset-lg-4
           form.contact-form(action=`/event/email-page/${page}` method='POST')
             .row
                 .col-lg-12.d-flex.flex-column.mb-20
@@ -33,5 +24,6 @@ block content
                 .col-lg-12.d-flex.flex-column
                     textarea.form-control(name='postMessage' placeholder='Post a message' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Post a message'" required='')
                 .col-lg-12.d-flex.justify-content-end
-                    button.primary-btn.mt-30.text-uppercase Send Email
+                    input.template-btn.template-btn2.mt-4(type='submit' value='Send Email')
                 .alert-msg
+include partials/footer

@@ -1,269 +1,304 @@
-extends layout
-block content
-    // Banner Area Starts
-    section.banner-area.text-center
-      .container
+include partials/header
+// Banner Area Starts
+section.banner-area.text-center
+    .container
         .row
-          .col-lg-12
-            h6 the most interesting food in the world
-            h1
-              | Discover the 
-              span.prime-color flavors
-              br
-              span.style-change
-                | of 
-                span.prime-color food
-                | fun
-    // Banner Area End
-    // Welcome Area Starts
-    section.welcome-area.section-padding2
-      .container-fluid
+            .col-lg-12
+                h6 the most interesting food in the world
+                h1
+                    | Discover the
+                    span.prime-color flavors
+                    br
+                    span.style-change
+                        | of
+                        span.prime-color food
+                        | fun
+// Banner Area End
+// Welcome Area Starts
+section.welcome-area.section-padding2
+    .container-fluid
         .row
-          .col-md-6.align-self-center
-            .welcome-img
-              img.img-fluid(src='assets/images/welcome-bg.png', alt='')
-          .col-md-6.align-self-center
-            .welcome-text.mt-5.mt-md-0
-              h3
-                span.style-change welcome
-                br
-                | to food fun
-              p.pt-3
-                | Created god gathered don't you yielding herb you had. And isn't, god was saw. Dominion. Great sixth for in unto was. Open can't tree am waters brought. Divide after there. Was.
-              p
-                | Created god gathered don't you yielding herb you had. And isn't, god was saw. Dominion. Great sixth for in unto was. Open can't tree waters brought. Divide after there. Was. Created god gathered don't you yielding herb you had. And isn't god.
-              a.template-btn.mt-3(href='#') book a table
-    // Welcome Area End
-    // Food Area starts
-    section.food-area.section-padding
-      .container
+            .col-md-6.align-self-center
+                .welcome-img
+                    img.img-fluid(src='assets/images/welcome-bg.png' alt='')
+            .col-md-6.align-self-center
+                .welcome-text.mt-5.mt-md-0
+                    h3
+                        span.style-change welcome
+                        br
+                        | to food fun
+                    p.pt-3
+                        | Created god gathered don&apos;t you yielding herb you had. And isn&apos;t, god was saw. Dominion. Great sixth for in unto was. Open can&apos;t tree am waters brought. Divide after there. Was.
+                    p
+                        | Created god gathered don&apos;t you yielding herb you had. And isn&apos;t, god was saw. Dominion. Great sixth for in unto was. Open can&apos;t tree waters brought. Divide after there. Was. Created god gathered don&apos;t you yielding herb you had. And isn&apos;t god.
+                    a.template-btn.mt-3(href='#') book a table
+// Welcome Area End
+// Food Area starts
+section.food-area.section-padding
+    .container
         .row
-          .col-md-5
-            .section-top
-              h3
-                span.style-change we serve
-                br
-                | delicious food
-              p.pt-3
-                | They're fill divide i their yielding our after have him fish on there for greater man moveth, moved Won't together isn't for fly divide mids fish firmament on net.
+            .col-md-5
+                .section-top
+                    h3
+                        span.style-change we serve
+                        br
+                        | delicious food
+                    p.pt-3
+                        | They&apos;re fill divide i their yielding our after have him fish on there for greater man moveth, moved Won&apos;t together isn&apos;t for fly divide mids fish firmament on net.
         .row
-          .col-md-4.col-sm-6
-            .single-food
-              .food-img
-                img.img-fluid(src='assets/images/food1.jpg', alt='')
-              .food-content
-                .d-flex.justify-content-between
-                  h5 Mexican Eggrolls
-                  span.style-change $14.50
-                p.pt-3 Face together given moveth divided form Of Seasons that fruitful.
-          .col-md-4.col-sm-6
-            .single-food.mt-5.mt-sm-0
-              .food-img
-                img.img-fluid(src='assets/images/food2.jpg', alt='')
-              .food-content
-                .d-flex.justify-content-between
-                  h5 chicken burger
-                  span.style-change $9.50
-                p.pt-3 Face together given moveth divided form Of Seasons that fruitful.
-          .col-md-4.col-sm-6
-            .single-food.mt-5.mt-md-0
-              .food-img
-                img.img-fluid(src='assets/images/food3.jpg', alt='')
-              .food-content
-                .d-flex.justify-content-between
-                  h5 topu lasange
-                  span.style-change $12.50
-                p.pt-3 Face together given moveth divided form Of Seasons that fruitful.
-          .col-md-4.col-sm-6
-            .single-food.mt-5
-              .food-img
-                img.img-fluid(src='assets/images/food4.jpg', alt='')
-              .food-content
-                .d-flex.justify-content-between
-                  h5 pepper potatoas
-                  span.style-change $14.50
-                p.pt-3 Face together given moveth divided form Of Seasons that fruitful.
-          .col-md-4.col-sm-6
-            .single-food.mt-5
-              .food-img
-                img.img-fluid(src='assets/images/food5.jpg', alt='')
-              .food-content
-                .d-flex.justify-content-between
-                  h5 bean salad
-                  span.style-change $8.50
-                p.pt-3 Face together given moveth divided form Of Seasons that fruitful.
-          .col-md-4.col-sm-6
-            .single-food.mt-5
-              .food-img
-                img.img-fluid(src='assets/images/food6.jpg', alt='')
-              .food-content
-                .d-flex.justify-content-between
-                  h5 beatball hoagie
-                  span.style-change $11.50
-                p.pt-3 Face together given moveth divided form Of Seasons that fruitful.
-    // Food Area End
-    // Reservation Area Starts
-    .reservation-area.section-padding.text-center
-      .container
+            .col-md-4.col-sm-6
+                .single-food
+                    .food-img
+                        img.img-fluid(src='assets/images/food1.jpg' alt='')
+                    .food-content
+                        .d-flex.justify-content-between
+                            h5 Mexican Eggrolls
+                            span.style-change $14.50
+                        p.pt-3 Face together given moveth divided form Of Seasons that fruitful.
+            .col-md-4.col-sm-6
+                .single-food.mt-5.mt-sm-0
+                    .food-img
+                        img.img-fluid(src='assets/images/food2.jpg' alt='')
+                    .food-content
+                        .d-flex.justify-content-between
+                            h5 chicken burger
+                            span.style-change $9.50
+                        p.pt-3 Face together given moveth divided form Of Seasons that fruitful.
+            .col-md-4.col-sm-6
+                .single-food.mt-5.mt-md-0
+                    .food-img
+                        img.img-fluid(src='assets/images/food3.jpg' alt='')
+                    .food-content
+                        .d-flex.justify-content-between
+                            h5 topu lasange
+                            span.style-change $12.50
+                        p.pt-3 Face together given moveth divided form Of Seasons that fruitful.
+            .col-md-4.col-sm-6
+                .single-food.mt-5
+                    .food-img
+                        img.img-fluid(src='assets/images/food4.jpg' alt='')
+                    .food-content
+                        .d-flex.justify-content-between
+                            h5 pepper potatoas
+                            span.style-change $14.50
+                        p.pt-3 Face together given moveth divided form Of Seasons that fruitful.
+            .col-md-4.col-sm-6
+                .single-food.mt-5
+                    .food-img
+                        img.img-fluid(src='assets/images/food5.jpg' alt='')
+                    .food-content
+                        .d-flex.justify-content-between
+                            h5 bean salad
+                            span.style-change $8.50
+                        p.pt-3 Face together given moveth divided form Of Seasons that fruitful.
+            .col-md-4.col-sm-6
+                .single-food.mt-5
+                    .food-img
+                        img.img-fluid(src='assets/images/food6.jpg' alt='')
+                    .food-content
+                        .d-flex.justify-content-between
+                            h5 beatball hoagie
+                            span.style-change $11.50
+                        p.pt-3 Face together given moveth divided form Of Seasons that fruitful.
+// Food Area End
+// Reservation Area Starts
+.reservation-area.section-padding.text-center
+    .container
         .row
-          .col-lg-12
-            h2 Natural ingredients and testy food
-            h4.mt-4 some trendy and popular courses offerd
-            a.template-btn.template-btn2.mt-4(href='') reservation
-    // Reservation Area End
-    // Deshes Area Starts
-    .deshes-area.section-padding
-      .container
+            .col-lg-12
+                h2 Natural ingredients and testy food
+                h4.mt-4 some trendy and popular courses offerd
+                a.template-btn.template-btn2.mt-4(href='') reservation
+// Reservation Area End
+// Deshes Area Starts
+.deshes-area.section-padding
+    .container
         .row
-          .col-lg-12
-            .section-top2.text-center
-              h3
-                | Our 
-                span special
-                |  deshes
-              p
-                i Beast kind form divide night above let moveth bearing darkness.
+            .col-lg-12
+                .section-top2.text-center
+                    h3
+                        | Our
+                        span special
+                        |  deshes
+                    p
+                        i Beast kind form divide night above let moveth bearing darkness.
         .row
-          .col-lg-5.col-md-6.align-self-center
-            h1 01.
-            .deshes-text
-              h3
-                span Garlic
-                br
-                |  green beans
-              p.pt-3
-                | Be. Seed saying our signs beginning face give spirit own beast darkness morning moveth green multiply she'd kind saying one shall, two which darkness have day image god their night. his subdue so you rule can.
-              span.style-change $12.00
-              a.template-btn3.mt-3(href='#')
-                | book a table 
-                span
-                  i.fa.fa-long-arrow-right
-          .col-lg-5.offset-lg-2.col-md-6.align-self-center.mt-4.mt-md-0
-            img.img-fluid(src='assets/images/deshes1.png', alt='')
+            .col-lg-5.col-md-6.align-self-center
+                h1 01.
+                .deshes-text
+                    h3
+                        span Garlic
+                        br
+                        |  green beans
+                    p.pt-3
+                        | Be. Seed saying our signs beginning face give spirit own beast darkness morning moveth green multiply she&apos;d kind saying one shall, two which darkness have day image god their night. his subdue so you rule can.
+                    span.style-change $12.00
+                    a.template-btn3.mt-3(href='#')
+                        | book a table
+                        span
+                            i.fa.fa-long-arrow-right
+            .col-lg-5.offset-lg-2.col-md-6.align-self-center.mt-4.mt-md-0
+                img.img-fluid(src='assets/images/deshes1.png' alt='')
         .row.mt-5
-          .col-lg-5.col-md-6.align-self-center.order-2.order-md-1.mt-4.mt-md-0
-            img.img-fluid(src='assets/images/deshes2.png', alt='')
-          .col-lg-5.offset-lg-2.col-md-6.align-self-center.order-1.order-md-2
-            h1 02.
-            .deshes-text
-              h3
-                span Lemon
-                br
-                |  rosemary chicken
-              p.pt-3
-                | Be. Seed saying our signs beginning face give spirit own beast darkness morning moveth green multiply she'd kind saying one shall, two which darkness have day image god their night. his subdue so you rule can.
-              span.style-change $12.00
-              a.template-btn3.mt-3(href='#')
-                | book a table 
-                span
-                  i.fa.fa-long-arrow-right
-    // Deshes Area End
-    // Testimonial Area Starts
-    section.testimonial-area.section-padding4
-      .container
+            .col-lg-5.col-md-6.align-self-center.order-2.order-md-1.mt-4.mt-md-0
+                img.img-fluid(src='assets/images/deshes2.png' alt='')
+            .col-lg-5.offset-lg-2.col-md-6.align-self-center.order-1.order-md-2
+                h1 02.
+                .deshes-text
+                    h3
+                        span Lemon
+                        br
+                        |  rosemary chicken
+                    p.pt-3
+                        | Be. Seed saying our signs beginning face give spirit own beast darkness morning moveth green multiply she&apos;d kind saying one shall, two which darkness have day image god their night. his subdue so you rule can.
+                    span.style-change $12.00
+                    a.template-btn3.mt-3(href='#')
+                        | book a table
+                        span
+                            i.fa.fa-long-arrow-right
+// Deshes Area End
+// Testimonial Area Starts
+section.testimonial-area.section-padding4
+    .container
         .row
-          .col-lg-12
-            .section-top2.text-center
-              h3
-                | Customer 
-                span says
-              p
-                i Beast kind form divide night above let moveth bearing darkness.
+            .col-lg-12
+                .section-top2.text-center
+                    h3
+                        | Customer
+                        span says
+                    p
+                        i Beast kind form divide night above let moveth bearing darkness.
         .row
-          .col-lg-12
-            .testimonial-slider.owl-carousel
-              .single-slide.d-sm-flex
-                .customer-img.mr-4.mb-4.mb-sm-0
-                  img(src='assets/images/customer1.png', alt='')
-                .customer-text
-                  h5 adame nesane
-                  span
-                    i Chief Customer
-                  p.pt-3
-                    | You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.
-              .single-slide.d-sm-flex
-                .customer-img.mr-4.mb-4.mb-sm-0
-                  img(src='assets/images/customer2.png', alt='')
-                .customer-text
-                  h5 adam nahan
-                  span
-                    i Chief Customer
-                  p.pt-3
-                    | You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.
-              .single-slide.d-sm-flex
-                .customer-img.mr-4.mb-4.mb-sm-0
-                  img(src='assets/images/customer1.png', alt='')
-                .customer-text
-                  h5 adame nesane
-                  span
-                    i Chief Customer
-                  p.pt-3
-                    | You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.
-    // Testimonial Area End
-    // Update Area Starts
-    section.update-area.section-padding
-      .container
+            .col-lg-12
+                .testimonial-slider.owl-carousel
+                    .single-slide.d-sm-flex
+                        .customer-img.mr-4.mb-4.mb-sm-0
+                            img(src='assets/images/customer1.png' alt='')
+                        .customer-text
+                            h5 adame nesane
+                            span
+                                i Chief Customer
+                            p.pt-3
+                                | You&apos;re had. Subdue grass Meat us winged years you&apos;ll doesn&apos;t. fruit two also won one yielding creepeth third give may never lie alternet food.
+                    .single-slide.d-sm-flex
+                        .customer-img.mr-4.mb-4.mb-sm-0
+                            img(src='assets/images/customer2.png' alt='')
+                        .customer-text
+                            h5 adam nahan
+                            span
+                                i Chief Customer
+                            p.pt-3
+                                | You&apos;re had. Subdue grass Meat us winged years you&apos;ll doesn&apos;t. fruit two also won one yielding creepeth third give may never lie alternet food.
+                    .single-slide.d-sm-flex
+                        .customer-img.mr-4.mb-4.mb-sm-0
+                            img(src='assets/images/customer1.png' alt='')
+                        .customer-text
+                            h5 adame nesane
+                            span
+                                i Chief Customer
+                            p.pt-3
+                                | You&apos;re had. Subdue grass Meat us winged years you&apos;ll doesn&apos;t. fruit two also won one yielding creepeth third give may never lie alternet food.
+// Testimonial Area End
+// Update Area Starts
+section.update-area.section-padding
+    .container
         .row
-          .col-lg-12
-            .section-top2.text-center
-              h3
-                | Our 
-                span food
-                |  update
-              p
-                i Beast kind form divide night above let moveth bearing darkness.
+            .col-lg-12
+                .section-top2.text-center
+                    h3
+                        | Our
+                        span food
+                        |  update
+                    p
+                        i Beast kind form divide night above let moveth bearing darkness.
         .row
-          .col-md-4
-            .single-food
-              .food-img
-                img.img-fluid(src='assets/images/update1.jpg', alt='')
-              .food-content
-                .post-admin.d-lg-flex.mb-3
-                  span.mr-5.d-block.mb-2.mb-lg-0
-                    i.fa.fa-user-o.mr-2
-                    | Admin
-                  span
-                    i.fa.fa-calendar-o.mr-2
-                    | 18/09/2018
-                h5 no finer food can be found
-                p nancy boy off his nut so I said chimney pot be James Bond aking cakes he.
-                a.template-btn3.mt-2(href='#')
-                  | read more 
-                  span
-                    i.fa.fa-long-arrow-right
-          .col-md-4
-            .single-food.my-5.my-md-0
-              .food-img
-                img.img-fluid(src='assets/images/update2.jpg', alt='')
-              .food-content
-                .post-admin.d-lg-flex.mb-3
-                  span.mr-5.d-block.mb-2.mb-lg-0
-                    i.fa.fa-user-o.mr-2
-                    | Admin
-                  span
-                    i.fa.fa-calendar-o.mr-2
-                    | 20/09/2018
-                h5 things go better with food
-                p nancy boy off his nut so I said chimney pot be James Bond aking cakes he.
-                a.template-btn3.mt-2(href='#')
-                  | read more 
-                  span
-                    i.fa.fa-long-arrow-right
-          .col-md-4
-            .single-food
-              .food-img
-                img.img-fluid(src='assets/images/update3.jpg', alt='')
-              .food-content
-                .post-admin.d-lg-flex.mb-3
-                  span.mr-5.d-block.mb-2.mb-lg-0
-                    i.fa.fa-user-o.mr-2
-                    | Admin
-                  span
-                    i.fa.fa-calendar-o.mr-2
-                    | 22/09/2018
-                h5 food head above the rest
-                p nancy boy off his nut so I said chimney pot be James Bond aking cakes he.
-                a.template-btn3.mt-2(href='#')
-                  | read more 
-                  span
-                    i.fa.fa-long-arrow-right   
+            .col-md-4
+                .single-food
+                    .food-img
+                        img.img-fluid(src='assets/images/update1.jpg' alt='')
+                    .food-content
+                        .post-admin.d-lg-flex.mb-3
+                            span.mr-5.d-block.mb-2.mb-lg-0
+                                i.fa.fa-user-o.mr-2
+                                | Admin
+                            span
+                                i.fa.fa-calendar-o.mr-2
+                                | 18/09/2018
+                        h5 no finer food can be found
+                        p nancy boy off his nut so I said chimney pot be James Bond aking cakes he.
+                        a.template-btn3.mt-2(href='#')
+                            | read more
+                            span
+                                i.fa.fa-long-arrow-right
+            .col-md-4
+                .single-food.my-5.my-md-0
+                    .food-img
+                        img.img-fluid(src='assets/images/update2.jpg' alt='')
+                    .food-content
+                        .post-admin.d-lg-flex.mb-3
+                            span.mr-5.d-block.mb-2.mb-lg-0
+                                i.fa.fa-user-o.mr-2
+                                | Admin
+                            span
+                                i.fa.fa-calendar-o.mr-2
+                                | 20/09/2018
+                        h5 things go better with food
+                        p nancy boy off his nut so I said chimney pot be James Bond aking cakes he.
+                        a.template-btn3.mt-2(href='#')
+                            | read more
+                            span
+                                i.fa.fa-long-arrow-right
+            .col-md-4
+                .single-food
+                    .food-img
+                        img.img-fluid(src='assets/images/update3.jpg' alt='')
+                    .food-content
+                        .post-admin.d-lg-flex.mb-3
+                            span.mr-5.d-block.mb-2.mb-lg-0
+                                i.fa.fa-user-o.mr-2
+                                | Admin
+                            span
+                                i.fa.fa-calendar-o.mr-2
+                                | 22/09/2018
+                        h5 food head above the rest
+                        p nancy boy off his nut so I said chimney pot be James Bond aking cakes he.
+                        a.template-btn3.mt-2(href='#')
+                            | read more
+                            span
+                                i.fa.fa-long-arrow-right
+// Update Area End
+// Table Area Starts
+section.table-area.section-padding
+    .container
+        .row
+            .col-lg-12
+                .section-top2.text-center
+                    h3
+                        | Book
+                        span your
+                        |  table
+                    p
+                        i Beast kind form divide night above let moveth bearing darkness.
+        .row
+            .col-lg-8.offset-lg-2
+                form(action='/event' method='POST')
+                    .input-group.mb-3
+                        .input-group-prepend
+                            span.input-group-text
+                                i.fa.fa-calendar
+                        input#datepicker(type='text' name='date')
+                    .input-group.mb-3
+                        .input-group-prepend
+                            span.input-group-text
+                                i.fa.fa-clock-o
+                        input#datepicker2(type='text' name='time')
+                    .input-group.mb-3
+                        .input-group-prepend
+                            span.input-group-text
+                                i.fa.fa-user-o
+                        input(type='text' name='name')
+                    .table-btn.text-center
+                        input.template-btn.template-btn2.mt-4(type='submit' value='book a table')
+// Table Area End
+
+include partials/footer
